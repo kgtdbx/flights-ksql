@@ -1,0 +1,90 @@
+{
+  "staticasset": [],
+  "datasets": [
+    {
+      "model": "datasets.dataset",
+      "pk": 18,
+      "fields": {
+        "dataconnection": 2,
+        "dataset_name": "planes",
+        "dataset_type": "singletable",
+        "dataset_detail": "ALL.PLANES",
+        "dataset_description": "",
+        "dataset_info": "[{\"tablename\":\"ALL.PLANES\",\"columns\":[{\"name\":\"ROWTIME\",\"type\":\"BIGINT\",\"isdim\":false,\"alias\":\"ROWTIME\",\"cast\":\"TIMESTAMP\"},{\"name\":\"ROWKEY\",\"type\":\"STRING\",\"isdim\":true,\"alias\":\"ROWKEY\"},{\"name\":\"ICAO24\",\"type\":\"STRING\",\"isdim\":true,\"alias\":\"ICAO24\"},{\"name\":\"LONGITUDE\",\"type\":\"DOUBLE\",\"isdim\":false,\"alias\":\"LONGITUDE\"},{\"name\":\"LATITUDE\",\"type\":\"DOUBLE\",\"isdim\":false,\"alias\":\"LATITUDE\"},{\"name\":\"CALLSIGN\",\"type\":\"STRING\",\"isdim\":true,\"alias\":\"CALLSIGN\"},{\"name\":\"ON_GROUND\",\"type\":\"BOOLEAN\",\"isdim\":true,\"alias\":\"ON_GROUND\"}]}]",
+        "uuid": "9cd4ad25-9174-4ae1-858e-68909fb62e1e",
+        "imported_uuid": null,
+        "cache_sequence": 0,
+        "dataset_settings": "{\"SEARCH\":{\"enabled\":false,\"expansions\":[],\"suggestions\":[],\"defaultAgg\":\"Record Count\",\"recordCount\":{\"terms\":\"count rows\"}}}",
+        "search_enabled": false
+      }
+    }
+  ],
+  "visuals": [
+    {
+      "model": "reports.report",
+      "pk": 104,
+      "fields": {
+        "report_name": "",
+        "report_description": "",
+        "dataset": 18,
+        "workspace": 2,
+        "report_type": "leaflet",
+        "report_mode": "",
+        "report_data": "{\"report_type\":\"leaflet\",\"report_data\":{\"core\":{\"viz_type\":\"leaflet\",\"shelves\":[{\"name\":\"geo_shelf\",\"shelf_type\":1,\"column_type\":3},{\"name\":\"aggregates_shelf\",\"shelf_type\":1,\"column_type\":2},{\"name\":\"color_shelf\",\"shelf_type\":1,\"column_type\":3},{\"name\":\"tooltip_shelf\",\"shelf_type\":1,\"column_type\":3},{\"name\":\"filters_shelf\",\"shelf_type\":2,\"column_type\":3}]},\"aggregates_shelf\":[],\"tooltip_shelf\":[{\"expression_for_trigger\":\"[CALLSIGN]\",\"dataset_colname\":\"CALLSIGN\",\"dataset_coltype\":\"STRING\",\"autotime_override\":\"AUTO\"}],\"filters_shelf\":[],\"sample_pct\":\"Off\",\"user_settings\":{\"container_css_class\":\"\",\"css_styles\":\"[]\",\"inline_css\":\"\",\"permit_csv_download_visual\":\"true\",\"csv_download_quotation\":\"false\",\"default_language\":\"\",\"permit_png_download\":\"false\",\"explicit_scope\":\"false\",\"permit_email_report\":\"true\",\"visual_dataset_scope\":\"true\",\"send_aggregate_parameters\":\"false\",\"nulls_order\":\"Default\",\"visual_font\":\"default\",\"visual_font_size\":\"\",\"title_font\":\"default\",\"title_font_size\":\"\",\"visual_title_font_weight\":\"default\",\"title_alignment\":\"Left\",\"subtitle_font\":\"default\",\"subtitle_font_size\":\"\",\"subtitle_alignment\":\"Left\",\"visual_hide_title\":\"false\",\"visual_show_detail_data\":\"true\",\"download_rows\":\"\",\"show_tooltip\":\"true\",\"tooltip_font\":\"default\",\"tooltip_font_size\":\"\",\"max_rowcount\":\"\",\"disable_incremental_queries\":\"false\",\"table_template\":\"table-template-2\",\"table_header_alignment\":\"data_dependent\",\"table_full_width\":\"false\",\"table_wrap_column_contents\":\"false\",\"parameters_send_all_cols\":\"false\",\"show_contextmenu\":\"true\",\"cells_are_html\":\"false\",\"nulls_display_value\":\"\",\"http_auto_link\":\"true\",\"table_totals\":\"false\",\"table_totals_header\":\"false\",\"max_columns\":\"20\",\"enable_info\":\"false\",\"enable_pagination\":\"true\",\"page_size\":20,\"table_header_background_color\":\"\",\"table_header_text_color\":\"\",\"table_odd_rows_background_color\":\"\",\"table_even_rows_background_color\":\"\",\"table_odd_rows_text_color\":\"\",\"table_even_rows_text_color\":\"\",\"table_border_color\":\"\",\"table_footer_background_color\":\"\",\"table_footer_text_color\":\"\",\"display_header_column_borders\":\"true\",\"legend_font_size\":\"\",\"color_palette\":\"{\\\"colors\\\":[\\\"#fd8d3c\\\",\\\"#fdae6b\\\",\\\"#fdd0a2\\\",\\\"#31a354\\\",\\\"#74c476\\\",\\\"#a1d99b\\\",\\\"#c7e9c0\\\",\\\"#756bb1\\\",\\\"#9e9ac8\\\",\\\"#bcbddc\\\",\\\"#dadaeb\\\",\\\"#636363\\\",\\\"#969696\\\",\\\"#bdbdbd\\\",\\\"#d9d9d9\\\",\\\"#1f77b4\\\",\\\"#aec7e8\\\",\\\"#ff7f0e\\\",\\\"#ffbb78\\\",\\\"#2ca02c\\\",\\\"#98df8a\\\",\\\"#d62728\\\",\\\"#ff9896\\\",\\\"#9467bd\\\",\\\"#c5b0d5\\\",\\\"#8c564b\\\",\\\"#c49c94\\\",\\\"#e377c2\\\",\\\"#f7b6d2\\\",\\\"#7f7f7f\\\",\\\"#c7c7c7\\\",\\\"#bcbd22\\\",\\\"#dbdb8d\\\",\\\"#17becf\\\",\\\"#9edae5\\\",\\\"#393b79\\\",\\\"#5254a3\\\",\\\"#6b6ecf\\\",\\\"#9c9ede\\\",\\\"#637939\\\",\\\"#8ca252\\\",\\\"#b5cf6b\\\",\\\"#cedb9c\\\",\\\"#8c6d31\\\",\\\"#bd9e39\\\",\\\"#e7ba52\\\",\\\"#e7cb94\\\",\\\"#843c39\\\",\\\"#ad494a\\\",\\\"#d6616b\\\",\\\"#e7969c\\\",\\\"#7b4173\\\",\\\"#a55194\\\",\\\"#ce6dbd\\\",\\\"#de9ed6\\\",\\\"#3182bd\\\",\\\"#6baed6\\\",\\\"#9ecae1\\\",\\\"#c6dbef\\\",\\\"#e6550d\\\"],\\\"colorSettings\\\":{},\\\"isReversed\\\":false}\",\"show_map_data_div\":\"false\",\"tile-style\":\"mapboxgl\",\"local_map_key\":\"\",\"visual_atlas_server\":\"\",\"map_style\":\"dark\",\"mapboxStyle\":\"\",\"choropleth_layer_id\":\"\",\"choropleth_opacity\":0.6,\"choropleth_legend\":\"true\",\"store_map_load_location\":\"true\",\"start_center\":\"-4.083100000000059, 53.92006009890329\",\"start_zom\":4.5764690917806945,\"heatmap_enabled\":\"false\",\"intensity_mag\":\"1000\",\"heatmap_radius\":\"20\",\"heatmap_visible_zoom_levels\":\"0-22\",\"heatmap_legend\":\"false\",\"cluster_enabled\":\"false\",\"cluster_color\":\"#ff9900\",\"cluster_radius\":\"80\",\"circle_enabled\":\"false\",\"circle_legend_area\":\"false\",\"circle_legend_color\":\"false\",\"circle_radius_range\":\"5-30\",\"circle_visible_zoom\":\"0-22\",\"marker_enabled\":\"false\",\"marker_permanent_labels\":\"false\",\"marker_type\":\"default\",\"route_enabled\":\"true\",\"start_marker_type\":\"none\",\"middle_marker_type\":\"none\",\"end_marker_type\":\"default\",\"custom_icon\":\"\",\"custom_icon_size_adjustment\":\"50\",\"hold_location_manual_move\":\"false\"},\"settings\":{\"colorSettings\":{},\"colors\":[\"#fd8d3c\",\"#fdae6b\",\"#fdd0a2\",\"#31a354\",\"#74c476\",\"#a1d99b\",\"#c7e9c0\",\"#756bb1\",\"#9e9ac8\",\"#bcbddc\",\"#dadaeb\",\"#636363\",\"#969696\",\"#bdbdbd\",\"#d9d9d9\",\"#1f77b4\",\"#aec7e8\",\"#ff7f0e\",\"#ffbb78\",\"#2ca02c\",\"#98df8a\",\"#d62728\",\"#ff9896\",\"#9467bd\",\"#c5b0d5\",\"#8c564b\",\"#c49c94\",\"#e377c2\",\"#f7b6d2\",\"#7f7f7f\",\"#c7c7c7\",\"#bcbd22\",\"#dbdb8d\",\"#17becf\",\"#9edae5\",\"#393b79\",\"#5254a3\",\"#6b6ecf\",\"#9c9ede\",\"#637939\",\"#8ca252\",\"#b5cf6b\",\"#cedb9c\",\"#8c6d31\",\"#bd9e39\",\"#e7ba52\",\"#e7cb94\",\"#843c39\",\"#ad494a\",\"#d6616b\",\"#e7969c\",\"#7b4173\",\"#a55194\",\"#ce6dbd\",\"#de9ed6\",\"#3182bd\",\"#6baed6\",\"#9ecae1\",\"#c6dbef\",\"#e6550d\"],\"graded_colors\":[\"#E0F7FA\",\"#B2EBF2\",\"#80DEEA\",\"#4DD0E1\",\"#26C6DA\",\"#00BCD4\",\"#00ACC1\",\"#0097A7\",\"#00838F\",\"#006064\"],\"contrast_colors\":[\"#0097A7\",\"#ED8111\",\"#2375B8\",\"#E54954\",\"#42996F\",\"#AD73B1\",\"#B0CB73\",\"#EA8DCD\"],\"reverse_colors\":false},\"report_title\":\"Planes Over UK\",\"report_subtitle\":\"\",\"report_derived_data\":[],\"click_behaviors\":{},\"limit\":100,\"customWidths\":[],\"selected_segments\":[],\"geo_shelf\":[{\"persistentId\":13690780858080199000,\"expression_for_trigger\":\"[LATITUDE]\",\"dataset_colname\":\"LATITUDE\",\"dataset_coltype\":\"DOUBLE\",\"geo_cast\":\"latitude\",\"autotime_override\":\"AUTO\"},{\"persistentId\":15372050830834500000,\"expression_for_trigger\":\"[LONGITUDE]\",\"dataset_colname\":\"LONGITUDE\",\"dataset_coltype\":\"DOUBLE\",\"geo_cast\":\"longitude\",\"autotime_override\":\"AUTO\"}],\"color_shelf\":[{\"persistentId\":78268750365964170000,\"expression_for_trigger\":\"[ICAO24]\",\"dataset_colname\":\"ICAO24\",\"dataset_coltype\":\"STRING\",\"autotime_override\":\"AUTO\"}],\"dashboard_id\":105}}",
+        "shared_visual_dashboards": null,
+        "uuid": "ab90e5b7-a6ed-4a2e-9ca4-11c6a36c0b6e",
+        "imported_uuid": null,
+        "has_css_styles": false,
+        "report_search_text": ""
+      }
+    }
+  ],
+  "segments": [],
+  "appgroupmembership": [],
+  "events": [],
+  "reportimage": [
+    {
+      "model": "reports.reportimage",
+      "pk": 59,
+      "fields": {
+        "report": 104,
+        "img": "iVBORw0KGgoAAAANSUhEUgAAAWgAAAEgCAYAAACZ7unUAAADGElEQVR42u3UQQ0AAAjEMMC/58MGCa2EPdZJUgCcMxIAGDQABg1g0AAYNIBBA2DQABg0gEEDYNAABg2AQQNg0AAGDYBBAxg0AAYNYNAAGDQABg1g0AAYNIBBA2DQABg0gEEDYNAABg2AQQMYNAAGDYBBAxg0AAYNYNAAGDQABg1g0AAYNIBBA2DQAAYNgEEDYNAABg2AQQMYNAAGDYBBAxg0AAYNYNAAGDQABg1g0AAYNIBBA2DQAAYNgEEDYNAABg2AQQMYNAAGDYBBAxg0AAYNYNAAGDSAQQNg0AAYNIBBA2DQAAYNgEEDYNAABg2AQQMYNAAGDWDQABg0AAYNYNAAGDSAQQNg0AAYNIBBA2DQAAYNgEEDYNAABg2AQQMYNAAGDWDQABg0AAYNYNAAGDSAQQNg0AAYNIBBA2DQAAYNgEEDGDQABg2AQQMYNAAGDWDQABg0AAYNYNAAGDSAQQNg0AAGDYBBA2DQAAYNgEEDGDQABg2AQQMYNAAGDWDQABg0AAYNYNAAGDSAQQNg0AAGDYBBA2DQAAYNgEEDGDQABg2AQQMYNAAGDWDQABg0gEEDYNAAGDSAQQNg0AAGDYBBA2DQAAYNgEEDGDQABg1g0AAYNAAGDWDQABg0gEEDYNAAGDSAQQNg0AAGDYBBA2DQAAYNgEEDGDQABg1g0AAYNAAGDWDQABg0gEEDYNAAGDSAQQNg0AAGDYBBAxg0AAYNgEEDGDQABg1g0AAYNAAGDWDQABg0gEEDYNAABg2AQQNg0AAGDYBBAxg0AAYNgEEDGDQABg1g0AAYNAAGDWDQABg0gEEDYNAABg2AQQNg0AAGDYBBAxg0AAYNgEEDGDQABg1g0AAYNIBBA2DQABg0gEEDYNAABg2AQQNg0AAGDYBBAxg0AAYNYNAAGDQABg1g0AAYNIBBA2DQABg0gEEDYNAABg2AQQMYtAQABg2AQQMYNAAGDWDQABg0AAYNYNAAGDSAQQNg0AAYNIBBA2DQAAYNgEEDGDQABg2AQQMYNAAGDWDQABg0AAYNYNAAGDSAQQNg0AB/LSB3BjzPmS4XAAAAAElFTkSuQmCC",
+        "uuid": "6e8c8cc3-fe1f-42fa-bae6-834d6f46b7b0",
+        "imported_uuid": null
+      }
+    }
+  ],
+  "dashboards": [
+    {
+      "model": "reports.report",
+      "pk": 105,
+      "fields": {
+        "report_name": "Planes Over UK",
+        "report_description": "placeholder desc",
+        "dataset": 18,
+        "workspace": 2,
+        "report_type": "dashboard",
+        "report_mode": "",
+        "report_data": "{\"dashboard_sheets\":[{\"order\":1,\"sheet_id\":1,\"sheet_handle_title\":\"Sheet 1\",\"behaviors\":{},\"visual_widgets\":[{\"col\":1,\"row\":1,\"size_x\":64,\"size_y\":40,\"id\":\"uri-1-widget-104\"}],\"control_widgets\":[]}],\"global_control_widgets\":[],\"control_widgets\":[],\"dashboard_widgets\":[{\"col\":1,\"row\":1,\"size_x\":64,\"size_y\":40,\"id\":\"uri-1-widget-104\"}],\"numColumns\":64,\"user_settings\":{\"container_css_class\":\"\",\"css_styles\":\"[]\",\"inline_css\":\"\",\"dashboard_fg_color\":\"\",\"dashboard_bg_color\":\"\",\"page_bg_color\":\"\",\"dashboard_width\":\"1024\",\"dashboard_enable_animations\":\"true\",\"manual_visual_refresh\":\"false\",\"horizontal_margin_between_visuals\":\"10\",\"vertical_margin_between_visuals\":\"10\",\"single_visual_dashboard\":\"false\",\"detailed_data_max_columns\":\"50\",\"display_filters\":\"false\",\"display_context_menu\":\"true\",\"dashboard_title_font\":\"default\",\"dashboard_title_font_size\":\"\",\"dashboard_title_font_weight\":\"default\",\"app_title_fg\":\"\",\"app_title_bg\":\"\",\"dashboard_title_alignment\":\"Left\",\"dashboard_subtitle_font\":\"default\",\"dashboard_subtitle_font_size\":\"\",\"dashboard_subtitle_fg_color\":\"\",\"dashboard_subtitle_bg_color\":\"\",\"dashboard_subtitle_alignment\":\"Left\",\"filters_on_left\":\"false\",\"filter_inline_labels\":\"false\",\"filter_label_line\":\"true\",\"borders_around_filters\":\"true\",\"filter_font\":\"default\",\"filter_font_size\":\"\",\"filter_title_color\":\"\",\"filter_selection_color\":\"\",\"filter_bg_color\":\"#f8f8f8\",\"filter_container_bg_color\":\"\",\"override_visual_font_settings\":\"true\",\"visual_font\":\"default\",\"borders_around_visuals\":\"false\",\"visual_border_color\":\"\",\"visual_border_radius\":\"\",\"title_font\":\"default\",\"subtitle_font\":\"default\",\"visual_font_size\":\"\",\"axis_label_font_size\":\"\",\"axis_ticks_font_size\":\"\",\"label_font_size\":\"\",\"label_color\":\"\",\"trellis_font_size\":\"\",\"legend_font_size\":\"\",\"visual_bg_color\":\"\",\"title_font_size\":\"\",\"subtitle_font_size\":\"\",\"visual_title_font_weight\":\"default\",\"tooltip_font\":\"default\",\"tooltip_font_size\":\"\",\"visual_title_fg\":\"\",\"visual_title_bg\":\"\",\"title_alignment\":\"Left\",\"visual_subtitle_fg\":\"\",\"visual_subtitle_bg\":\"\",\"subtitle_alignment\":\"Left\",\"dashboard_hide_title\":\"false\",\"permit_png_download\":\"false\",\"enable_chromium_pdf\":\"false\",\"print_pdf_scale\":\"0\",\"print_pdf_size\":\"Letter\",\"print_pdf_orientation\":\"Portrait\",\"print_pdf_enable_header_footer\":\"false\",\"permit_csv_download_dashboard\":\"true\",\"permit_email_report\":\"true\",\"auto_refresh_seconds\":\"\",\"dashboard_case_sensitive\":\"true\",\"dashboard_display_view_data\":\"true\",\"visuals_after_filters\":\"true\"},\"report_title\":\"Planes Over UK\",\"report_subtitle\":\"\"}",
+        "shared_visual_dashboards": "[]",
+        "uuid": "f4394a11-4a9f-4e14-9e47-f869d99c7e1b",
+        "imported_uuid": null,
+        "has_css_styles": false,
+        "report_search_text": null
+      }
+    }
+  ],
+  "colorpalette": [],
+  "dateranges": [],
+  "appgroups": [],
+  "customcss": [],
+  "version": {
+    "Arcviz Version": "5.0.1.0",
+    "Raw Timestamp of last commit": "1553552706",
+    "Timestamp of last commit": "Mon Mar 25 15:25:06 2019 -0700",
+    "SHA of last commit": "c146d37fbf0876efb765ab44405244635e6f6314",
+    "Description": "v5.0.1.0-55-gc146d37fb",
+    "OS X Installer URL": "http://get.arcadiadata.com/macosx/v5.0.1.0/Arcadia_Instant.pkg",
+    "WIN Installer URL": "http://get.arcadiadata.com/windows/v5.0.1.0/Arcadia_Instant.msi"
+  }
+}
